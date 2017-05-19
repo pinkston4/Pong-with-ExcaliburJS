@@ -16,13 +16,17 @@ class Player extends ex.Actor {
         super.update(game, delta);
         
         //custom update logic
-        //press or hold the left arrow to move left
+        //press or hold the left arrow to move up
         if (game.input.keyboard.isHeld(ex.Input.Keys.Left) || game.input.keyboard.wasPressed(ex.Input.Keys.Left)) {
-            this.pos.y -= 20;
+            if (this.pos.y > config.paddleHeight/2 ) {
+                this.pos.y -= 10;
+            }
         }
-        //press or hold the right arrow to move right
+        //press or hold the right arrow to move down
          if (game.input.keyboard.isHeld(ex.Input.Keys.Right) || game.input.keyboard.wasPressed(ex.Input.Keys.Right)) {
-            this.pos.y += 20;
+             if (this.pos.y < config.gameHeight - config.paddleHeight/2) {
+                this.pos.y += 10;
+             }
         }
     }
 }

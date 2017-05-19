@@ -1,4 +1,7 @@
 class Npc extends ex.Actor {
+
+ 
+
     constructor() {
         //super invokes the ex.Actor class that Player extends
         super(config.npcPaddleX, config.paddleY, config.paddleWidth, config.paddleHeight, config.color);
@@ -14,15 +17,14 @@ class Npc extends ex.Actor {
     public update(game, delta) {
         //updating the base update logic
         super.update(game, delta);
-        
         //custom update logic
-        //press or hold the left arrow to move left
-        // if (game.input.keyboard.isHeld(ex.Input.Keys.Left) || game.input.keyboard.wasPressed(ex.Input.Keys.Left)) {
-        //     this.pos.y -= 20;
-        // }
-        // //press or hold the right arrow to move right
-        //  if (game.input.keyboard.isHeld(ex.Input.Keys.Right) || game.input.keyboard.wasPressed(ex.Input.Keys.Right)) {
-        //     this.pos.y += 20;
-        // }
+        if (ball.vel.x < 0 ) {
+            if (this.pos.y < ball.yDestination && ball.yDestination < 475) {
+                this.pos.y += 10;
+            } 
+            if (this.pos.y > ball.yDestination && ball.yDestination > -25) {
+                this.pos.y -= 10;
+            }
+        }
     }
 }

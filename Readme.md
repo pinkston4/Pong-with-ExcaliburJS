@@ -1,6 +1,6 @@
 # Pong with Excalibur.js
 
-Basic implementation of excalibur.js to build pong for the browser
+Basic implementation of excalibur.js used to build pong for the browser
 
 ## Compiling the game
 
@@ -11,3 +11,6 @@ To compile:
 
     npm install
     npm start
+
+Use the left arrow to move the paddle up the screen, 
+and the right arrow to move it down.
