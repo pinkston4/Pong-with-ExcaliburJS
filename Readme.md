@@ -14,8 +14,8 @@ To compile:
     npm start
 
 Controls:
-    -left arrow: move paddle up
-    -right arrow: move paddle down
+1. left arrow: move paddle up
+1. right arrow: move paddle down
 
 ![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/blob/master/resources/mainScreenShot.png)
 ![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/blob/master/resources/gameScreenShot.png)
