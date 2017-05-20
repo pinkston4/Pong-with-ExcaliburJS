@@ -17,5 +17,5 @@ Controls:
 left arrow: move paddle up
 right arrow: move paddle down
 
-![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/tree/master/resources/mainScreenShot.png)
-![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/tree/master/resources/gameScreenShot.png)
+![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/blob/master/resources/mainScreenShot.png)
+![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/blob/master/resources/gameScreenShot.png)
