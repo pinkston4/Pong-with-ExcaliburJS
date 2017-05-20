@@ -19,10 +19,10 @@ class Npc extends ex.Actor {
         super.update(game, delta);
         //custom update logic
         if (ball.vel.x < 0 ) {
-            if (this.pos.y < ball.yDestination && ball.yDestination < 475) {
+            if (this.pos.y < ball.yDestination && ball.yDestination < 480 && this.pos.y < 450) {
                 this.pos.y += 10;
             } 
-            if (this.pos.y > ball.yDestination && ball.yDestination > -25) {
+            if (this.pos.y > ball.yDestination && ball.yDestination > -30 && this.pos.y > 0) {
                 this.pos.y -= 10;
             }
         }

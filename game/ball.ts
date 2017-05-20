@@ -10,7 +10,7 @@ class Ballz extends ex.Actor {
 
     constructor() {
         //super invokes the ex.Actor class that Ballz extends
-        super(100, 100, config.ballDimension, config.ballDimension, config.color);
+        super(config.npcPaddleX +10, config.paddleY, config.ballDimension, config.ballDimension, config.color);
 
         //switching the default collision type from PreventCollision to Elastic
         //NOTE: According to the documentation, Elastic will be deprecated soon, 
@@ -18,12 +18,14 @@ class Ballz extends ex.Actor {
         this.collisionType = ex.CollisionType.Elastic;
 
         //setting the initial velocity in the x and y directions
-        this.vel.setTo(100,100);
+        this.vel.setTo(100,-50);
 
         this.on('collision', (ev: ex.CollisionEvent) => {
             if(ev.other == topBorder || ev.other == bottomBorder) {
-                if(this.vel.y < 250 && this.vel.y > -250 && this.vel.x < 250 && this.vel.x > -250) {
-                    this.vel.y *= 1.2;
+                if(this.vel.y < 300 && this.vel.y > -300) {
+                    this.vel.y *= 1.1;
+                }
+                if( this.vel.x < 350 && this.vel.x > -350 ) {
                     this.vel.x *= 1.2;
                 }
             } 

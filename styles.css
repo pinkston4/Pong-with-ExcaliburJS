@@ -4,9 +4,17 @@ canvas {
     display: block;
     width: 600px;
     height: 450px;
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+#gameButton {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    margin-top: 5px;
 }

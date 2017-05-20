@@ -5,11 +5,12 @@
 /// <reference path="npc.ts" />
 /// <reference path="border.ts" />
 /// <reference path="menu.ts" />
-/// <reference path="gameover.ts" />
 
 var game = new ex.Engine({
     width: config.gameWidth,
     height: config.gameHeight,
+    canvasElementId: 'gameCanvas',
+    pointerScope: ex.Input.PointerScope.Canvas
 });
 
 var loader = new ex.Loader();
@@ -47,21 +48,18 @@ gameScene.add(npc);
 gameScene.add(player);
 gameScene.add(ball);
 
-
 var menuScene = new MainMenu();
 
-
-var loseIcon = new ex.Actor(0, 0, 300, 225);
+var loseIcon = new ex.Actor(300, 225, 300, 225);
 loseIcon.addDrawing(resources.lose);
 
-var loseScene= new GameOver();
+var loseScene= new ex.Scene();
 loseScene.add(loseIcon);
 
-
-var winIcon = new ex.Actor(0, 0, 300, 225);
+var winIcon = new ex.Actor(300, 225, 300, 225);
 winIcon.addDrawing(resources.win);
 
-var winScene= new GameOver();
+var winScene= new ex.Scene();
 winScene.add(winIcon);
 
 
