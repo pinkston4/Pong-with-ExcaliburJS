@@ -13,5 +13,9 @@ To compile:
     bower install
     npm start
 
-Use the left arrow to move the paddle up the screen, 
-and the right arrow to move it down.
+Controls:
+left arrow: move paddle up
+right arrow: move paddle down
+
+![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/tree/master/resources/mainScreenShot.png)
+![alt tag](https://github.com/pinkston4/Pong-with-ExcaliburJS/tree/master/resources/gameScreenShot.png)
